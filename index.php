@@ -8,13 +8,14 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
 
-    <title>Starter Template for Bootstrap</title>
+    <title>CCN Transportes</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/styles/bootstrap.min.css" rel="stylesheet"/>
 
-    <!-- Custom styles for this template -->
+    <link href="/assets/styles/slippry.css" rel="stylesheet"/>
     <link href="/assets/styles/index.css" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -24,7 +25,6 @@
 </head>
 
 <body>
-
 <nav class="navbar transparent navbar-inverse navbar-fixed-top">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -34,65 +34,54 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="#"><img src="/assets/images/layout/logos1.png" title="CCN" width="216" height="110" /></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#sobre">sobre</a></li>
-            <li><a href="#servicos">serviços</a></li>
-            <li><a href="#atuacao">área de atuação</a></li>
-            <li><a href="#seguranca">segurança</a></li>
-            <li><a href="#noticias">notícias</a></li>
-            <li><a href="#localize">localize sua carga</a></li>
-            <li><a href="#contato">contato</a></li>
+            <li class="active"><a href="#home" class="subNavBtn" target="myCarousel">Home</a></li>
+            <li><a href="#sobre" class="subNavBtn" target="session1">sobre</a></li>
+            <li><a href="#servicos" class="subNavBtn" target="session3">serviços</a></li>
+            <li><a href="#atuacao" class="subNavBtn" target="session7">área de atuação</a></li>
+            <li><a href="#seguranca" class="subNavBtn" target="session9">segurança</a></li>
+            <li><a href="#noticias" class="subNavBtn" target="session10">notícias</a></li>
+            <li><a href="/login.html" target="_blank">localize sua carga</a></li>
+            <li><a href="#contato" class="subNavBtn" target="session11">contato</a></li>
         </ul>
     </div>
     <!--/.nav-collapse -->
 </nav>
 
 <!-- Carousel -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active first_slide">
-            <img class="first-slide"
-                 src="/assets/images/slide01_01.png"
-                 alt="First slide">
+<ul id="myCarousel">
+    <li class="item active first_slide">
+        <img class="first-slide"
+             src="/assets/images/slide01_01.png"
+             alt="First slide">
 
-        </div>
+    </li>
 
-        <div class="item">
-            <img class="second-slide"
-                 src="/assets/images/slide01_02.jpg"
-                 alt="Second slide">
+    <li class="item">
+        <img class="second-slide"
+             src="/assets/images/slide01_02.jpg"
+             alt="Second slide">
 
-        </div>
+    </li>
 
-        <div class="item">
-            <img class="third-slide"
-                 src="/assets/images/slide01_03.png"
-                 alt="Third slide">
+    <li class="item">
+        <img class="third-slide"
+             src="/assets/images/slide01_03.png"
+             alt="Third slide">
 
-        </div>
+    </li>
     </div>
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-    <svg class="oblique-section svg-bottom" preserveAspectRatio="none" viewBox="0 0 86 86" width="100%" height="86">
-        <polygon points="0,86 86,0 86,86" style="fill:#FAFAFA;"/>
-    </svg>
-</div>
+</ul>
+<!--svg class="oblique-section svg-bottom" preserveAspectRatio="none" viewBox="0 0 86 86" width="100%" height="86">
+    <polygon points="0,86 86,0 86,86" style="fill:#FAFAFA;"/>
+</svg-->
 <!-- /.carousel -->
 
 <div id="session1">
@@ -125,7 +114,7 @@
     <br/>
     <br/>
     <br/>
-    opa
+    ''
     <br/>
     <br/>
     <br/>
@@ -138,6 +127,9 @@
 
 <div id="session3">
     <div class="container">
+        <div class="tcenter">
+            <h2>serviços e diferenciais</h2>
+        </div>
         <div class="row">
             <div class="col-md-3">
                 <img src="/assets/images/layout/servicos.png" title="Serviços"/>
@@ -205,7 +197,7 @@
 </div>
 
 
-<div id="session4" class="parallax">
+<div id="session4" class="parallax" data-stellar-background-ratio="0.5">
     <svg class="oblique-section svg-top" preserveAspectRatio="none" viewBox="0 0 86 86" width="100%" height="86">
         <polygon points="0,0 0,86 86,0" style="fill:#FAFAFA;"/>
     </svg>
@@ -213,7 +205,6 @@
     <svg class="oblique-section svg-bottom" preserveAspectRatio="none" viewBox="0 0 86 86" width="100%" height="86">
         <polygon points="0,86 86,0 86,86" style="fill:#FAFAFA;"/>
     </svg>
-    &nbsp;
 </div>
 
 <div id="session5">
@@ -234,7 +225,7 @@
     </div>
 </div>
 
-<div id="session6" class="parallax">
+<div id="session6" class="parallax" data-stellar-background-ratio="0.5">
     <svg class="oblique-section svg-top" preserveAspectRatio="none" viewBox="0 0 86 86" width="100%" height="86">
         <polygon points="0,0 0,86 86,0" style="fill:#FAFAFA;"/>
     </svg>
@@ -260,7 +251,7 @@
     </div>
 </div>
 
-<div id="session8" class="parallax">
+<div id="session8" class="parallax" data-stellar-background-ratio="0.5">
     <svg class="oblique-section svg-top" preserveAspectRatio="none" viewBox="0 0 86 86" width="100%" height="86">
         <polygon points="0,0 0,86 86,0" style="fill:#FAFAFA;"/>
     </svg>
@@ -453,6 +444,8 @@
 <script src="/assets/scripts/bootstrap.min.js"></script>
 
 <script src="/assets/scripts/vscroll.js"></script>
+<script src="/assets/scripts/jquery.stellar.js"></script>
+<script src="/assets/scripts/slippry.min.js"></script>
 <script src="/assets/scripts/index.js"></script>
 </body>
 </html>

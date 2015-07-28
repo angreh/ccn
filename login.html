@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../login/img/icon.png">
+
+
+    <title>CCN - Transportes Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../login/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../login/css/signin.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+    <div class="logo">
+        <img src="../login/img/logo.png"/><br/>
+    </div>
+
+    <form name="rastreie_sua_carga" class="form-signin" onsubmit="return Ghs.portal(this, '_blank');">
+
+        <label for="cnpj" class="lbl">CNPJ</label>
+        <input type="tel" name="cnpj" id="cnpj" class="form-control" placeholder="CNPJ" required autofocus>
+        <label for="senha" class="lbl">SENHA</label>
+        <input type="password" name="senha" id="senha" class="form-control" placeholder="SENHA" required>
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Lembrar-me </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">ENTRAR</button>
+
+        <br/><div class="center_div"><a href="/" title="Você está perdido?">← Voltar para CCN - TRANSPORTES</a></div>
+    </form>
+
+</div>
+<!-- /container -->
+
+
+<script type="text/javascript" src="/login/js/ext-core.js"></script>
+<script type="text/javascript" src="/login/js/ghsix.js"></script>
+<script type="text/javascript">
+    Ext.onReady(function () {
+        Ghs = new Ext.ghs();
+    });
+</script>
+</body>
+</html>

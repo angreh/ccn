@@ -11,6 +11,10 @@ svg {
     margin-right: 50px;
 }
 ul.nav a:hover { color: #000 !important; }
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .navbar-right li {
@@ -125,7 +129,7 @@ ul.nav a:hover { color: #000 !important; }
     margin-bottom: 100px;
 }
 
-#session1 h2, #session5 h2, #session7 h2, #session9 h2, #session10 h2 {
+#session1 h2, #session5 h2, #session7 h2, #session9 h2, #session10 h2, #session3 h2 {
     color: #45404b;
     font-size: 36px;
     font-style: normal;
@@ -190,14 +194,23 @@ ul.nav a:hover { color: #000 !important; }
     padding: 0;
     margin: 20px 0;
 }
+#session3 .tcenter {
+    text-align: center;
+}
 
 /* Session 4
 -------------------------------------------------------------- */
-
-#session4 {
-    background: #000 url("/assets/images/layout/image007.jpg");
-    height: 500px;
+.parallax {
+    background-attachment: fixed;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-color: #000;
     background-size: 100%;
+}
+#session4 {
+    position: relative;
+    height: 500px;
+    background-image: url("/assets/images/layout/image007.jpg");
 }
 
 #session4 {
@@ -211,9 +224,8 @@ ul.nav a:hover { color: #000 !important; }
 /* Sessino6
 ---------------------------------------------------------- */
 #session6 {
-    background: #000 url("/assets/images/layout/parallax-cidade1.jpg");
     height: 500px;
-    background-size: 100%;
+    background-image: url("/assets/images/layout/parallax-cidade1.jpg");
 }
 
 #session6 {
@@ -231,9 +243,8 @@ ul.nav a:hover { color: #000 !important; }
 -------------------------------------------------------------- */
 
 #session8 {
-    background: #000 url("/assets/images/layout/seguranca.jpg");
     height: 500px;
-    background-size: 100%;
+    background-image: url("/assets/images/layout/seguranca.jpg");
 }
 
 #session8 {
