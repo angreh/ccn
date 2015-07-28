@@ -1,0 +1,22 @@
+<h2 class="header deep-orange-text text-darken-3">Adicionar Notícia</h2>
+<blockquote>
+    Preencha o formulário abaixo para adicionar uma nova notícia.
+</blockquote>
+
+<div class="deep-orange-text text-lighten-1 breadcrumb"><i class="tiny material-icons">home</i> Notícias /
+    Adicionar
+</div>
+<form onsubmit="Greh.submit(this); return false;" action="noticias-store">
+    <input type="hidden" name="user_id" value="{USER_ID}" />
+    <div class="input-field">
+        <input id="title_news" type="text" name="title" class="validate">
+        <label for="title_news" class="deep-orange-text text-darken-3">Título:</label>
+    </div>
+    <div class="input-field">
+        <textarea id="msg_news" name="message" class="materialize-textarea"></textarea>
+        <label for="msg_news" class="deep-orange-text text-darken-3">Mensagem:</label>
+    </div>
+    <div class="input-field">
+        <input type="submit" class="waves-effect waves-light deep-orange darken-3 btn" value="Enviar"/>
+    </div>
+</form>

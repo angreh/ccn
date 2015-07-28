@@ -1,0 +1,331 @@
+html, body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #FAFAFA;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+}
+.navbar-right {
+    margin-right: 50px;
+}
+ul.nav a:hover { color: #000 !important; }
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .navbar-right li {
+        height: 80px;
+    }
+    .navbar-right a {
+        margin-top: 52px;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .navbar-right li {
+        height: 110px;
+    }
+    .navbar-right a {
+        margin-top: 52px;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .navbar-right li {
+        height: 160px;
+    }
+    .navbar-right a {
+        margin-top: 52px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+}
+
+.svg-bottom {
+    bottom: 0;
+}
+
+.svg-top {
+    top: 0;
+}
+
+/* Personalizando Navbar
+------------------------------------------------------------ */
+.navbar.transparent {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border: none;
+}
+
+.navbar-inverse {
+    background-color: #222;
+    border: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #00aee7;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    height: 850px;
+    margin-bottom: 60px;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+    height: 850px;
+}
+
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 850px;
+}
+
+.carousel-control.left, #myCarousel .carousel-control.right {
+    background: none;
+}
+
+.carousel-inner .item .first_slide {
+    background: #000 url("/assets/images/slide01_01.png");
+}
+
+/* Session 01 - Quem Somos
+------------------------------------------------------------------------ */
+#session1 {
+    background-color: #FAFAFA;
+    text-align: center;
+}
+
+#session1 .container, #session5 .container, #session7 .container, #session9 .container {
+    max-width: 780px;
+    margin-bottom: 100px;
+}
+
+#session1 h2, #session5 h2, #session7 h2, #session9 h2, #session10 h2 {
+    color: #45404b;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-transform: lowercase;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#session1 h4, #session5 h4, #session7 h4, #session9 h4 {
+    font-size: 18px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: #9c9999;
+}
+
+/* Session 2 - Oo que falam sobre nós
+------------------------------------------------------------------------- */
+
+#session2 {
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+/* Session 3
+------------------------------------------------------------------------ */
+#session3 .container {
+    max-width: 1130px;
+}
+
+#session3 h5 {
+    color: #45404b;
+    font-size: 20px;
+    line-height: 32px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-transform: lowercase;
+}
+
+#session3 p {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+    color: #9c9999;
+}
+
+#session3 hr {
+    background-color: #AACDD4;
+    border: none;
+    width: 25px;
+    height: 3px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Session 4
+-------------------------------------------------------------- */
+
+#session4 {
+    background: #000 url("/assets/images/layout/image007.jpg");
+    height: 500px;
+    background-size: 100%;
+}
+
+#session4 {
+    position: relative;
+    padding: 86px 0;
+}
+
+/* Session5
+------------------------------------------------------------- */
+
+/* Sessino6
+---------------------------------------------------------- */
+#session6 {
+    background: #000 url("/assets/images/layout/parallax-cidade1.jpg");
+    height: 500px;
+    background-size: 100%;
+}
+
+#session6 {
+    position: relative;
+    padding: 86px 0;
+}
+
+/* Session7
+----------------------------------------------------------- */
+#session7 .container img {
+    width: 100%;
+}
+
+/* Session 8
+-------------------------------------------------------------- */
+
+#session8 {
+    background: #000 url("/assets/images/layout/seguranca.jpg");
+    height: 500px;
+    background-size: 100%;
+}
+
+#session8 {
+    position: relative;
+    padding: 86px 0;
+}
+
+/* Session 9
+-------------------------------------------------------------- */
+#session9 li {
+    color: #9c9999;
+}
+
+/* Session10
+--------------------------------------------------------- */
+#session10 .container {
+    max-width: 1130px;
+    padding-bottom: 150px;
+}
+
+#session10 h5 {
+    color: #45404b;
+    font-size: 20px;
+    line-height: 32px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-transform: lowercase;
+}
+
+#session10 p {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+    color: #9c9999;
+}
+
+#session10 hr {
+    background-color: #AACDD4;
+    border: none;
+    width: 25px;
+    height: 3px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#session10 .nimg {
+    text-align: center;
+}
+
+#session10 {
+    position: relative;
+}
+
+/* Session 11
+---------------------------------------------------------------- */
+#session11 {
+    background-color: #000;
+}
+
+/* Session12
+------------------------------------------------------------------ */
+#session12 h4 {
+    font-size: 20px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: lowercase;
+    color: #ffffff;
+    text-align: center;
+}
+
+#session12 .container {
+    padding: 100px 0;
+}
+
+#session12 {
+    background-color: #dd9933;
+    position: relative;
+}
+
+/* Session13
+--------------------------------------------------------------------- */
+#session13 {
+    background-color: #000;
+}
+
+#session13 .container {
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}

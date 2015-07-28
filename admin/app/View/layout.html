@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+<div id="all_container_div">
+    <div id="left_menu_div" class="text-white">
+
+        <div id="logo">
+            <img src="/admin/imgs/logo.png" title="cre8"/>
+        </div>
+
+        <ul id="left_menu" class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">dashboard</i>
+                    <a href="#dashboard" onclick="Greh.load('dashboard-nt-view'); return false;">Painel Geral</a>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">subject</i>Notícias</div>
+                <div class="collapsible-body">
+
+                    <p>
+                        <i class="tiny material-icons">subject</i>
+                        <a href="#noticias-list" onclick="Greh.load('noticias-list'); return false;">
+                            &nbsp;&nbsp;Listar</a>
+                    </p>
+
+                    <p><i class="tiny material-icons">add</i><a href="#noticias-list"
+                                                                onclick="Greh.load('noticias-add'); return false;">
+                        &nbsp;&nbsp;Adicionar</a></p>
+
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">comment</i>Comentários</div>
+                <div class="collapsible-body">
+
+                    <p>
+                        <i class="tiny material-icons">subject</i>
+                        <a href="#noticias-list" onclick="Greh.load('comentarios-list'); return false;">&nbsp;&nbsp;Listar</a>
+                    </p>
+
+                    <p><i class="tiny material-icons">add</i><a href="#noticias-list"
+                                                                onclick="Greh.load('comentarios-add'); return false;">
+                        &nbsp;&nbsp;Adicionar</a></p>
+
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">person</i>Usuários</div>
+                <div class="collapsible-body">
+
+                    <p>
+                        <i class="tiny material-icons">subject</i>
+                        <a href="#noticias-list" onclick="Greh.load('usuarios-list'); return false;">
+                            &nbsp;&nbsp;Listar</a>
+                    </p>
+
+                    <p><i class="tiny material-icons">add</i><a href="#noticias-list"
+                                                                onclick="Greh.load('usuarios-add'); return false;">
+                        &nbsp;&nbsp;Adicionar</a></p>
+
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">arrow_back</i><a
+                        href="/admin/index.php?route=logout">Logout</a></div>
+            </li>
+        </ul>
+    </div>
+    <!-- ./left_menu -->
+
+    <div id="right_content_div">
+        <div id="base_content_div">
+            <div class="inner">
+                {CONTENT}
+            </div>
+        </div>
+        <!-- ./base_content -->
+    </div>
+    <!-- ./right_content -->
+
+</div>
+<!-- ./all_container -->
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

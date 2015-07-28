@@ -1,0 +1,27 @@
+<h2 class="header deep-orange-text text-darken-3">Notícias</h2>
+<blockquote>
+    Abaixo a lista das notícias existentes no sistema
+</blockquote>
+
+<div class="deep-orange-text text-lighten-1 breadcrumb"><i class="tiny material-icons">home</i> Notícias /
+    Listar
+</div>
+<table class="hoverable">
+    <thead>
+    <tr>
+        <th data-field="title">Titulo</th>
+        <th data-field="message">Mensagem</th>
+        <th data-field="action">Ação</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!-- BEGIN NOTICIAS_BLOCK -->
+    <tr>
+        <td>{TITLE}</td>
+        <td>{MESSAGE}</td>
+        <td><a href="#{ID}">Excluir</td>
+    </tr>
+    <!-- END NOTICIAS_BLOCK -->
+    </tbody>
+</table>
