@@ -1,0 +1,22 @@
+<h2 class="header deep-orange-text text-darken-3">Editar usuário</h2>
+<blockquote>
+    Preencha o formulário abaixo para adicionar um novo usuário.
+</blockquote>
+
+<div class="deep-orange-text text-lighten-1 breadcrumb"><i class="tiny material-icons">home</i> Usuários /
+    Editar
+</div>
+<form onsubmit="Greh.submit(this); return false;" action="usuarios-store">
+    <input type="hidden" name="id" value="{ID}" />
+    <div class="input-field">
+        <input id="login" type="text" name="login" value="{LOGIN}" class="validate" disabled="disabled" />
+        <label for="login" class="active deep-orange-text text-darken-3">E-mail:</label>
+    </div>
+    <div class="input-field">
+        <input id="pass" type="password" name="pass" class="validate">
+        <label for="pass" class="deep-orange-text text-darken-3">Nova Senha:</label>
+    </div>
+    <div class="input-field">
+        <input type="submit" class="waves-effect waves-light deep-orange darken-3 btn" value="Enviar"/>
+    </div>
+</form>

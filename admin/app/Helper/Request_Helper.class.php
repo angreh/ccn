@@ -14,9 +14,10 @@ class Request_Helper
     public static $getVars = [];
     public static $postVars = [];
 
-
     public static function init()
     {
+        exit('searchingInit');
+
         if (isset($_GET['route']) && !empty($_GET['route'])) {
             self::$route = $_GET['route'];
             unset($_GET['route']);
@@ -36,7 +37,7 @@ class Request_Helper
 
     public static function applyRoute()
     {
-        require APP_PATH . '/routes.php';
+        require APP_PATH . 'routes.php';
         $auxCtrlAct = explode('@', $routes[self::$route]);
         self::$controller = $auxCtrlAct[0];
         self::$action = $auxCtrlAct[1];

@@ -13,15 +13,15 @@ class View_Helper
     {
         if (is_bool($layout)) {
             if ($layout) {
-                $tpl = Template_Helper::getInstance(APP_PATH . '/View/layout.html');
+                $tpl = Template_Helper::getInstance(APP_PATH . 'View/layout.html');
             } else {
-                $tpl = Template_Helper::getInstance(APP_PATH . '/View/no-layout.html');
+                $tpl = Template_Helper::getInstance(APP_PATH . 'View/no-layout.html');
             }
         } else {
-            $tpl = Template_Helper::getInstance(APP_PATH . '/View/' . $layout . '.html');
+            $tpl = Template_Helper::getInstance(APP_PATH . 'View/' . $layout . '.html');
         }
 
-        $file_view = realpath(APP_PATH . '/View/' . str_replace('.', '/', $view) . '.html');
+        $file_view = realpath(APP_PATH . 'View/' . str_replace('.', '/', $view) . '.html');
         $tpl->addFile('CONTENT', $file_view);
 
         if (!empty($vars)) {

@@ -29,8 +29,28 @@ class Comentarios_Controller extends Base_Controller
         ], false);
     }
 
-    public function store(){
+    public function edit()
+    {
+        $comentarios = $this->model->get([
+            'id' => Request_Helper::post('id')
+        ]);
+        View_Helper::make('comentarios.edit', [
+            'ID' => $comentarios->id,
+            'USER_ID' => $comentarios->user_id,
+            'CLIENT' => $comentarios->client,
+            'MESSAGE' => $comentarios->message
+        ], false);
+    }
+
+    public function store()
+    {
         parent::store();
         echo 'comentarios-list';
+    }
+
+    public function delete()
+    {
+        parent::delete();
+        Request_Helper::redirect('comentarios-list');
     }
 }

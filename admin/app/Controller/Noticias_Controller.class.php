@@ -37,7 +37,15 @@ class Noticias_Controller extends Base_Controller
 
     public function edit()
     {
-        View_Helper::make('noticias.edit', [], false);
+        $noticia = $this->model->get([
+            'id' => Request_Helper::post('id')
+        ]);
+        View_Helper::make('noticias.edit', [
+            'ID' => $noticia->id,
+            'USER_ID' => $noticia->user_id,
+            'TITLE' => $noticia->title,
+            'MESSAGE' => $noticia->message
+        ], false);
     }
 
     public function store()
@@ -45,6 +53,12 @@ class Noticias_Controller extends Base_Controller
         parent::store();
         echo 'noticias-list';
         exit;
+    }
+
+    public function delete()
+    {
+        parent::delete();
+        Request_Helper::redirect('noticias-list');
     }
 
 }

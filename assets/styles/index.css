@@ -159,7 +159,27 @@ ul.nav a:hover { color: #000 !important; }
     color: #fff;
     text-align: center;
 }
-
+.container_title {
+    font-size: 36px;
+    line-height: 33px;
+    letter-spacing: 0px;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: lowercase;
+    margin-bottom: 30px;
+}
+.client_message {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0px;
+    font-weight: 300;
+}
+.client_name {
+    font-size: 20px;
+    line-height: 33px;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
 /* Session 3
 ------------------------------------------------------------------------ */
 #session3 .container {

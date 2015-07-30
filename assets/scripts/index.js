@@ -4,16 +4,6 @@
 $(function () {
     $('#myCarousel').slippry();
 
-    /*$('#session4').VScroll({
-        speed: 0.8,
-        topAdjust: 400
-    });
-
-    $('#session8').VScroll({
-        speed: 0.8,
-        topAdjust: 400
-    });*/
-    //$('.parallax').stellar();
     $.stellar({
         horizontalScrolling: false,
         verticalOffset: 40
@@ -30,6 +20,42 @@ $(function () {
             return false;
         });
 
+    });
+
+    $.ajax({
+        dataType: "json",
+        url: '/admin/index.php?route=site-comments',
+        success: function (data) {
+            $.each(data, function (i, item) {
+                newDiv = $('<article />')
+                    .html('<div class="client_message">"' + item.message + '"</div><div class="client_name">- ' + item.client + '</div>');
+                $('#client_carolsel').append(newDiv);
+            });
+            $('#client_carolsel').slippry({
+                slippryWrapper: '<div class="sy-box news-slider" />', // wrapper to wrap everything, including pager
+                elements: 'article', // elments cointaining slide content
+                pager: false
+            });
+        }
+    });
+
+    $.ajax({
+        dataType: "json",
+        url: '/admin/index.php?route=site-news',
+        success: function (data) {
+            $.each(data, function (i, item) {
+                var content = '<div class="col-md-3">' +
+                    '<div class="nimg">' +
+                    '<img src="/assets/images/layout/news-150x150.png" title="Notícias"/>' +
+                    '</div>' +
+                    '<h5>' + item.title + '</h5>' +
+                    '<hr/>' +
+                    '<p>' + item.message + '</p>' +
+                    '</div>';
+                newDiv = $('<article />').html(content);
+                $('#news_div').append(newDiv);
+            });
+        }
     });
 
 });

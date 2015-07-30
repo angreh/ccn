@@ -11,7 +11,7 @@
     <tr>
         <th data-field="title">Titulo</th>
         <th data-field="message">Mensagem</th>
-        <th data-field="action">Ação</th>
+        <th data-field="action" class="right-align" style="width: 150px;">Ação</th>
     </tr>
     </thead>
 
@@ -20,7 +20,10 @@
     <tr>
         <td>{TITLE}</td>
         <td>{MESSAGE}</td>
-        <td><a href="#{ID}">Excluir</td>
+        <td class="right-align">
+            <a href="#" onclick="Greh.load('noticias-edit','id={ID}');return false;"><i class="material-icons">edit</i></a>
+            <a href="#" onclick="Greh.load('noticias-delete','id={ID}');return false;"><i class="material-icons">delete</i></a>
+        </td>
     </tr>
     <!-- END NOTICIAS_BLOCK -->
     </tbody>

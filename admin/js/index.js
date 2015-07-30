@@ -18,7 +18,18 @@ var Greh = {
         $('#base_content_div').width(bcd_width);
     },
     load: function (route) {
-        $('#base_content_div .inner').load('/admin/index.php?route=' + route);
+        if (arguments[1] == undefined) {
+            $('#base_content_div .inner').load('/admin/index.php?route=' + route);
+        } else {
+            $.ajax({
+                type: 'POST',
+                url: '/admin/index.php?route=' + route,
+                data: arguments[1],
+                success: function(result){
+                    $('#base_content_div .inner').html(result);
+                }
+            });
+        }
     },
     submit: function (form) {
         $.ajax({

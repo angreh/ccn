@@ -12,12 +12,12 @@ class AutoLoad_Helper
 {
     /**
      * Instância da classe AutoLoader
-     * @var AutoLoader
+     * @var AutoLoad_Helper
      */
     private static $_instance = null;
 
     /**
-     * Retorna uma instância de AutoLoader, caso não exista é criada
+     * Retorna uma instância de AutoLoad_Helper, caso não exista é criada
      *
      * @return AutoLoad_Helper
      */
@@ -34,6 +34,7 @@ class AutoLoad_Helper
      */
     public function register()
     {
+
         spl_autoload_register(array($this, '_autoloader'));
     }
 
@@ -46,6 +47,8 @@ class AutoLoad_Helper
     private function _autoloader($name)
     {
         $pieces = explode('_', $name);
-        require APP_PATH .'/'. $pieces[1] .'/'. $name . '.class.php';
+        $path = realpath(APP_PATH . $pieces[1] . '/' . $name . '.class.php');
+        //echo $path.'<br />';
+        require_once($path);
     }
 }

@@ -10,7 +10,7 @@
     <thead>
     <tr>
         <th data-field="title">Usuário</th>
-        <th data-field="action">Ação</th>
+        <th data-field="action" class="right-align" style="width: 150px;">Ação</th>
     </tr>
     </thead>
 
@@ -18,7 +18,10 @@
     <!-- BEGIN NOTICIAS_BLOCK -->
     <tr>
         <td>{LOGIN}</td>
-        <td><a href="#{ID}">Excluir</td>
+        <td class="right-align">
+            <a href="#" onclick="Greh.load('usuarios-edit','id={ID}');return false;"><i class="material-icons">edit</i></a>
+            <a href="#" onclick="Greh.load('usuarios-delete','id={ID}');return false;"><i class="material-icons">delete</i></a>
+        </td>
     </tr>
     <!-- END NOTICIAS_BLOCK -->
     </tbody>

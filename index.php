@@ -34,7 +34,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="/assets/images/layout/logos1.png" title="CCN" width="216" height="110" /></a>
+        <a class="navbar-brand" href="#"><img src="/assets/images/layout/logos1.png" title="CCN" width="216"
+                                              height="110"/></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -114,7 +115,11 @@
     <br/>
     <br/>
     <br/>
-    ''
+
+    <div class="container_title">O que dizem sobre nós?</div>
+    <div class="container">
+        <div id="client_carolsel"></div>
+    </div>
     <br/>
     <br/>
     <br/>
@@ -291,9 +296,9 @@
     <div class="container">
         <h2>notícias</h2>
 
-        <div class="row">
+        <div class="row" id="news_div">
 
-            <div class="col-md-3">
+            <!--div class="col-md-3">
                 <div class="nimg">
                     <img src="/assets/images/layout/news-150x150.png" title="Notícias"/>
                 </div>
@@ -329,7 +334,7 @@
                 <hr/>
                 <p>Após a realização da entrega, ainda no Portal de Informações o cliente também tem disponível seus
                     comprovantes de entrega digitalizados.</p>
-            </div>
+            </div-->
         </div>
     </div>
     <svg class="oblique-section svg-bottom" preserveAspectRatio="none" viewBox="0 0 86 86" width="100%" height="86">

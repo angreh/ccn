@@ -1,17 +1,17 @@
-<h2 class="header deep-orange-text text-darken-3">Editar Notícia</h2>
+<h2 class="header deep-orange-text text-darken-3">Editar Comentário</h2>
 <blockquote>
-    Preencha o formulário abaixo para adicionar uma nova notícia.
+    Preencha o formulário abaixo para adicionar um novo comnetário de um cliente sobre os nossos serviços.
 </blockquote>
 
-<div class="deep-orange-text text-lighten-1 breadcrumb"><i class="tiny material-icons">home</i> Notícias /
+<div class="deep-orange-text text-lighten-1 breadcrumb"><i class="tiny material-icons">home</i> Comentários /
     Editar
 </div>
-<form onsubmit="Greh.submit(this); return false;" action="noticias-store">
+<form onsubmit="Greh.submit(this); return false;" action="comentarios-store">
     <input type="hidden" name="user_id" value="{USER_ID}" />
     <input type="hidden" name="id" value="{ID}" />
     <div class="input-field">
-        <input id="title_news" type="text" name="title" value="{TITLE}" class="validate">
-        <label for="title_news" class="active deep-orange-text text-darken-3">Título:</label>
+        <input id="title_news" type="text" name="client" value="{CLIENT}" class="validate">
+        <label for="title_news" class="active deep-orange-text text-darken-3">Cliente:</label>
     </div>
     <div class="input-field">
         <textarea id="msg_news" name="message" class="materialize-textarea">{MESSAGE}</textarea>

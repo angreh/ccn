@@ -11,7 +11,7 @@
     <tr>
         <th data-field="title">Mensagem</th>
         <th data-field="message">Cliente</th>
-        <th data-field="action">Ação</th>
+        <th data-field="action" class="right-align" style="width: 150px;">Ação</th>
     </tr>
     </thead>
 
@@ -20,7 +20,14 @@
     <tr>
         <td>{MESSAGE}</td>
         <td>{CLIENT}</td>
-        <td><a href="#{ID}">Excluir</td>
+        <td class="right-align">
+            <a href="#" onclick="Greh.load('comentarios-edit','id={ID}');return false;">
+                <i class="material-icons">edit</i>
+            </a>
+            <a href="#" onclick="Greh.load('comentarios-delete','id={ID}');return false;">
+                <i class="material-icons">delete</i>
+            </a>
+        </td>
     </tr>
     <!-- END COMENTARIOS_BLOCK -->
     </tbody>
