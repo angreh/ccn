@@ -16,30 +16,30 @@ class Comentarios_Controller extends Base_Controller
 
     public function showAll()
     {
-        $comentarios = $this->model->getAll(['id', 'client', 'message']);
-        View_Helper::make('comentarios.list', [
+        $comentarios = $this->model->getAll(array('id', 'client', 'message'));
+        View_Helper::make('comentarios.list', array(
             'COMENTARIOS_BLOCK' => $comentarios
-        ], false);
+        ), false);
     }
 
     public function add()
     {
-        View_Helper::make('comentarios.add', [
+        View_Helper::make('comentarios.add', array(
             'USER_ID' => $this->user_id
-        ], false);
+        ), false);
     }
 
     public function edit()
     {
-        $comentarios = $this->model->get([
+        $comentarios = $this->model->get(array(
             'id' => Request_Helper::post('id')
-        ]);
-        View_Helper::make('comentarios.edit', [
+        ));
+        View_Helper::make('comentarios.edit', array(
             'ID' => $comentarios->id,
             'USER_ID' => $comentarios->user_id,
             'CLIENT' => $comentarios->client,
             'MESSAGE' => $comentarios->message
-        ], false);
+        ), false);
     }
 
     public function store()

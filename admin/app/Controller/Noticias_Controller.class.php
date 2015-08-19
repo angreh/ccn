@@ -17,35 +17,35 @@ class Noticias_Controller extends Base_Controller
 
     public function view()
     {
-        View_Helper::make('noticias.view', [], false);
+        View_Helper::make('noticias.view', array(), false);
     }
 
     public function showAll()
     {
-        $noticias = $this->model->getAll(['id', 'title', 'message']);
-        View_Helper::make('noticias.list', [
+        $noticias = $this->model->getAll(array('id', 'title', 'message'));
+        View_Helper::make('noticias.list', array(
             'NOTICIAS_BLOCK' => $noticias
-        ], false);
+        ), false);
     }
 
     public function add()
     {
-        View_Helper::make('noticias.add', [
+        View_Helper::make('noticias.add', array(
             'USER_ID' => $this->user_id
-        ], false);
+        ), false);
     }
 
     public function edit()
     {
-        $noticia = $this->model->get([
+        $noticia = $this->model->get(array(
             'id' => Request_Helper::post('id')
-        ]);
-        View_Helper::make('noticias.edit', [
+        ));
+        View_Helper::make('noticias.edit', array(
             'ID' => $noticia->id,
             'USER_ID' => $noticia->user_id,
             'TITLE' => $noticia->title,
             'MESSAGE' => $noticia->message
-        ], false);
+        ), false);
     }
 
     public function store()

@@ -1,5 +1,5 @@
 <?php
-$routes = [
+$routes = array(
     /* Dashboard */
     'index'             => 'Login_Controller@login',
     'dashboard'         => 'Dashboard_Controller@view',
@@ -32,4 +32,4 @@ $routes = [
 
     /* Logout */
     'logout'            => 'Login_Controller@logout',
-];
+);

@@ -11,32 +11,32 @@ class Dashboard_Controller extends Base_Controller
     public function view()
     {
         $data = $this->getData();
-        View_Helper::make('dashboard.view', [
+        View_Helper::make('dashboard.view', array(
             'NOTICIAS_BLOCK' => $data['noticias'],
             'COMENTARIOS_BLOCK' => $data['comentarios']
-        ]);
+        ));
     }
 
     public function noTemplateView()
     {
         $data = $this->getData();
-        View_Helper::make('dashboard.view', [
+        View_Helper::make('dashboard.view', array(
             'NOTICIAS_BLOCK' => $data['noticias'],
             'COMENTARIOS_BLOCK' => $data['comentarios']
-        ], false);
+        ), false);
     }
 
     private function getData()
     {
         $notModel = new Noticia_Model();
-        $noticias = $notModel->getAll(['id', 'title', 'message']);
+        $noticias = $notModel->getAll(array('id', 'title', 'message'));
 
         $comModel = new Comentarios_Model();
-        $comentarios = $comModel->getAll(['id', 'client', 'message']);
+        $comentarios = $comModel->getAll(array('id', 'client', 'message'));
 
-        return [
+        return array(
             'noticias' => $noticias,
             'comentarios' => $comentarios
-        ];
+        );
     }
 } 

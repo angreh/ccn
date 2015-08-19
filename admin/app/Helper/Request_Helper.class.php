@@ -11,13 +11,11 @@ class Request_Helper
     public static $route = 'index';
     public static $controller = '';
     public static $action = '';
-    public static $getVars = [];
-    public static $postVars = [];
+    public static $getVars = array();
+    public static $postVars = array();
 
     public static function init()
     {
-        exit('searchingInit');
-
         if (isset($_GET['route']) && !empty($_GET['route'])) {
             self::$route = $_GET['route'];
             unset($_GET['route']);
@@ -71,6 +69,7 @@ class Request_Helper
 
     public static function redirect($route)
     {
+        //exit('opa');
         header('Location: /admin/index.php?route=' . $route);
         exit;
     }

@@ -111,7 +111,7 @@ class Template_Helper {
      */
     public function addFile($varname, $filename) {
         if (!$this->exists($varname))
-            throw new \InvalidArgumentException("addFile: var $varname does not exist");
+            throw new InvalidArgumentException("addFile: var $varname does not exist");
         $this->loadfile($varname, $filename);
     }
     /**
@@ -122,7 +122,7 @@ class Template_Helper {
      */
     public function __set($varname, $value) {
         if (!$this->exists($varname))
-            throw new \RuntimeException("var $varname does not exist");
+            throw new RuntimeException("var $varname does not exist");
         $stringValue = $value;
         if (is_object($value)) {
             $this->instances[$varname] = $value;
@@ -146,7 +146,7 @@ class Template_Helper {
             return $this->values["{" . $varname . "}"];
         elseif (isset($this->instances[$varname]))
             return $this->instances[$varname];
-        throw new \RuntimeException("var $varname does not exist");
+        throw new RuntimeException("var $varname does not exist");
     }
     /**
      * Check if a template var exists.
@@ -287,7 +287,7 @@ class Template_Helper {
         foreach ($blocks as $parent => $block) {
             foreach ($block as $chield) {
                 if (in_array($chield, $this->blocks))
-                    throw new \UnexpectedValueException("duplicated block: $chield");
+                    throw new UnexpectedValueException("duplicated block: $chield");
                 $this->blocks[] = $chield;
                 $this->setBlock($parent, $chield);
             }
@@ -314,7 +314,7 @@ class Template_Helper {
         } else
             $reg = "/<!--\s*BEGIN\s+$block\s+-->\s*(\s*.*?\s*)<!--\s+END\s+$block\s*-->\s*((\s*.*?\s*)<!--\s+FINALLY\s+$block\s*-->)?\s*/sm";
         if (1 !== preg_match($reg, $str, $m))
-            throw new \UnexpectedValueException("mal-formed block $block");
+            throw new UnexpectedValueException("mal-formed block $block");
         $this->setValue($name, '');
         $this->setValue($block, $m[1]);
         $this->setValue($parent, preg_replace($reg, "{" . $name . "}", $str));
@@ -421,7 +421,7 @@ class Template_Helper {
                             else {
                                 $className = $property[$i - 1] ? $property[$i - 1] : get_class($instance);
                                 $class = is_null($pointer) ? "NULL" : get_class($pointer);
-                                throw new \BadMethodCallException("no accessor method in class " . $class . " for " . $className . "->" . $property[$i]);
+                                throw new BadMethodCallException("no accessor method in class " . $class . " for " . $className . "->" . $property[$i]);
                             }
                         } else {
                             $pointer = $instance->get($obj);
@@ -464,7 +464,7 @@ class Template_Helper {
      */
     public function block($block) {
         if (!in_array($block, $this->blocks))
-            throw new \InvalidArgumentException("block $block does not exist");
+            throw new InvalidArgumentException("block $block does not exist");
         // Checking finally blocks inside this block
         if (isset($this->parents[$block]))
             foreach ($this->parents[$block] as $child) {

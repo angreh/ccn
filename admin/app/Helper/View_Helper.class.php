@@ -9,7 +9,7 @@
 class View_Helper
 {
 
-    public static function make($view, $vars = [], $layout = true)
+    public static function make($view, $vars = array(), $layout = true)
     {
         if (is_bool($layout)) {
             if ($layout) {

@@ -15,27 +15,27 @@ class Usuarios_Controller extends Base_Controller
 
     public function showAll()
     {
-        $usuarios = $this->model->getAll(['id', 'login']);
-        View_Helper::make('usuarios.list', [
+        $usuarios = $this->model->getAll(array('id', 'login'));
+        View_Helper::make('usuarios.list', array(
             'NOTICIAS_BLOCK' => $usuarios
-        ], false);
+        ), false);
     }
 
     public function add()
     {
-        View_Helper::make('usuarios.add', [], false);
+        View_Helper::make('usuarios.add', array(), false);
     }
 
 
     public function edit()
     {
-        $usuario = $this->model->get([
+        $usuario = $this->model->get(array(
             'id' => Request_Helper::post('id')
-        ]);
-        View_Helper::make('usuarios.edit', [
+        ));
+        View_Helper::make('usuarios.edit', array(
             'ID' => $usuario->id,
             'LOGIN' => $usuario->login
-        ], false);
+        ), false);
     }
 
     public function store()

@@ -325,7 +325,9 @@ ul.nav a:hover { color: #000 !important; }
 /* Session 11
 ---------------------------------------------------------------- */
 #session11 {
+    padding-top: 20px;
     background-color: #000;
+    color: #fff;
 }
 
 /* Session12

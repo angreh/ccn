@@ -10,7 +10,7 @@ class Model_Core
 {
     protected $table = '';
 
-    public function getAll($values = [])
+    public function getAll($values = array())
     {
         if (empty($values)) {
             $fields = '*';
@@ -21,7 +21,7 @@ class Model_Core
 
         $result = $this->query($sql);
         if ($result->num_rows > 0) {
-            $return = [];
+            $return = array();
             while ($row = $result->fetch_object()) {
                 $return[] = $row;
             }
@@ -33,19 +33,21 @@ class Model_Core
 
     public function get($where)
     {
-        $clause = [];
+        $clause = array();
         foreach ($where as $field => $value) {
-            $clause[] = $field . '=\'' . $value . "'";
+            $clause[] = $field . "='" . $value . "'";
         }
         $clause = implode(' AND ', $clause);
         $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $clause . " AND deleted=0";
+
+        //exit(var_dump($sql));
 
         $result = $this->query($sql);
         if ($result->num_rows == 1) {
             return $result->fetch_object();
         } else {
             if ($result->num_rows > 1) {
-                $return = [];
+                $return = array();
                 while ($row = $result->fetch_object()) {
                     $return[] = $row;
                 }
@@ -68,7 +70,7 @@ class Model_Core
             $id = $data['id'];
             unset($data['id']);
         }
-        $fields = [];
+        $fields = array();
         foreach ($data as $field => $value) {
             $fields[] = $field . '="' . $value . '"';
         }
@@ -79,10 +81,10 @@ class Model_Core
 
     public function softDelete($id)
     {
-        return $this->update([
+        return $this->update(array(
             'id' => $id,
             'deleted' => 1
-        ]);
+        ));
     }
 
     public function delete($id)
@@ -92,7 +94,12 @@ class Model_Core
 
     public function dbConnect()
     {
-        $db = mysqli_connect('localhost', 'root', '', 'ccntransporte');
+        //exit(var_dump($_SERVER));
+        if($_SERVER['SERVER_NAME'] == "ccn.local"){
+            $db = mysqli_connect('localhost', 'root', '', 'ccntransportes');
+        } else {
+            $db = mysqli_connect('mysql01.ccntransportes.hospedagemdesites.ws', 'ccntransportes', 'Mudar123', 'ccntransportes');
+        }
         return $db;
     }
 

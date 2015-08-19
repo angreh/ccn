@@ -19,7 +19,7 @@ class Login_Controller extends Controller_Core
         if (!empty($post)) {
             $this->storeSession($post);
         }
-        View_Helper::make('login.login', [], 'login');
+        View_Helper::make('login.login', array(), 'login');
     }
 
     public function logout()
@@ -33,6 +33,7 @@ class Login_Controller extends Controller_Core
     {
         $post['pass'] = md5($post['pass']);
         $user = $this->model->get($post);
+        //exit(var_dump($user));
         if (is_object($user)) {
             @ session_start();
             $_SESSION['id'] = $user->id;
