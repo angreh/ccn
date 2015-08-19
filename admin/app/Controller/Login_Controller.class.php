@@ -26,6 +26,7 @@ class Login_Controller extends Controller_Core
     {
         @ session_start();
         unset($_SESSION['id']);
+        session_destroy();
         Request_Helper::redirect('index');
     }
 
