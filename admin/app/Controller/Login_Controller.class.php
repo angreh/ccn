@@ -22,6 +22,11 @@ class Login_Controller extends Controller_Core
         View_Helper::make('login.login', array(), 'login');
     }
 
+    public function fail()
+    {
+        View_Helper::make('login.fail', array(), 'login');
+    }
+
     public function logout()
     {
         @ session_start();

@@ -2,24 +2,30 @@ html, body {
     height: 100%;
     background: url("/admin/imgs/bg.gif") repeat-y;
 }
+
 a {
     outline: none;
 }
+
 a img {
     border: none;
 }
+
 .collapsible p {
     margin: 0;
     padding: 8px;
 }
+
 .collapsible-body {
     padding: 8px 20px;
 }
+
 #all_container_div {
     height: 100%;
     position: relative;
     width: 100%;
 }
+
 #left_menu_div {
     float: left;
     width: 200px;
@@ -27,52 +33,98 @@ a img {
 
     overflow: hidden;
 }
+
 #left_menu_div * {
     border: none;
 }
+
 .collapsible-header {
     background-color: inherit;
     border-bottom: 1px solid #d84315;
 }
+
 #base_content_div {
     position: absolute;
     top: 0;
     right: 0;
     width: 50px;
 }
+
 #base_content_div .inner {
     padding: 30px;
 }
+
 .collapsible-body a {
     color: #e3baae;
 }
+
 #logo {
     margin: 40px 0;
- text-align: center;
+    text-align: center;
 }
+
 .breadcrumb {
     background-color: #fbe9e7;
     padding: 10px;
     margin-bottom: 70px;
 }
+
 .collapsible-header a {
     color: #000;
 }
+
 #right_content_div a {
     color: #d84315;
 }
+
 .cr8footer {
     text-align: right;
     padding-right: 10px;
 }
+
 .cr8footer hr {
     height: 1px;
     border: none;
     margin: 20px 0;
     background-color: #ddd;
 }
+
 .cr8footer div {
     color: #ddd;
     padding-right: 50px;
     margin-bottom: 80px;
+}
+
+/* ---------------------------------------------------------------------------------- */
+.cropit-image-preview {
+    background-color: #f8f8f8;
+    background-size: cover;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 7px;
+    width: 250px;
+    height: 250px;
+    cursor: move;
+}
+
+.cropit-image-background {
+    opacity: .2;
+    cursor: auto;
+}
+
+.image-size-label {
+    margin-top: 10px;
+}
+
+.cropit-image-input {
+    width: 1px;
+    height: 1px;
+}
+
+.cropit-image-zoom-input {
+    width: 250px !important;
+}
+
+.export {
+    margin-top: 10px;
 }

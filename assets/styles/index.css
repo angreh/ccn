@@ -7,49 +7,110 @@ svg {
     position: absolute;
     left: 0;
 }
+
 .navbar-right {
     margin-right: 50px;
 }
-ul.nav a:hover { color: #000 !important; }
+
+ul.nav a:hover {
+    color: #000 !important;
+}
+
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
     color: #000;
     background-color: rgba(255, 255, 255, 0.8);
 }
+
+.navbar-brand img {
+    height: 30px;
+}
+#header_phone {
+    display: none;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+    .navbar-brand img {
+        height: 50px;
+    }
+
     .navbar-right li {
         height: 80px;
     }
+
     .navbar-right a {
         margin-top: 52px;
         text-transform: uppercase;
         font-size: 12px;
+    }
+    .navbar.transparent {
+        background: rgba(255, 255, 255, 0.75);
     }
 
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    #header_phone {
+        display: block;
+    }
+
+    .navbar-brand img {
+        height: 80px;
+    }
+
     .navbar-right li {
         height: 110px;
     }
+
     .navbar-right a {
         margin-top: 52px;
         text-transform: uppercase;
         font-size: 12px;
     }
+    .navbar.transparent {
+        background: rgba(255, 255, 255, 0.75);
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+    #header_phone {
+        display: block;
+    }
+
+    .navbar-brand img {
+        height: 110px;
+    }
+
     .navbar-right li {
         height: 160px;
     }
+
     .navbar-right a {
         margin-top: 52px;
         text-transform: uppercase;
         font-size: 14px;
     }
+    .navbar.transparent {
+        background: rgba(255, 255, 255, 0.75);
+    }
+}
+
+.navbar-brand img {
+    /*height: 100%;*/
+}
+
+#header_phone {
+    color: #00aee7;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: 13px;
+    position: absolute;
+    right: 65px;
+    top: 45px;
 }
 
 .svg-bottom {
@@ -62,9 +123,6 @@ ul.nav a:hover { color: #000 !important; }
 
 /* Personalizando Navbar
 ------------------------------------------------------------ */
-.navbar.transparent {
-    background: rgba(255, 255, 255, 0.4);
-}
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border: none;
@@ -159,6 +217,7 @@ ul.nav a:hover { color: #000 !important; }
     color: #fff;
     text-align: center;
 }
+
 .container_title {
     font-size: 36px;
     line-height: 33px;
@@ -168,18 +227,21 @@ ul.nav a:hover { color: #000 !important; }
     text-transform: lowercase;
     margin-bottom: 30px;
 }
+
 .client_message {
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 0px;
     font-weight: 300;
 }
+
 .client_name {
     font-size: 20px;
     line-height: 33px;
     letter-spacing: 0px;
     font-weight: 700;
 }
+
 /* Session 3
 ------------------------------------------------------------------------ */
 #session3 .container {
@@ -214,6 +276,7 @@ ul.nav a:hover { color: #000 !important; }
     padding: 0;
     margin: 20px 0;
 }
+
 #session3 .tcenter {
     text-align: center;
 }
@@ -227,6 +290,7 @@ ul.nav a:hover { color: #000 !important; }
     background-color: #000;
     background-size: 100%;
 }
+
 #session4 {
     position: relative;
     height: 500px;
@@ -276,6 +340,19 @@ ul.nav a:hover { color: #000 !important; }
 -------------------------------------------------------------- */
 #session9 li {
     color: #9c9999;
+}
+
+/* Session 9,5 ------------------------------------------------- */
+
+#session095 {
+    height: 500px;
+    background-color: #fff6da;
+    background-image: url("/assets/images/layout/DSC014442.JPG");
+}
+
+#session095 {
+    position: relative;
+    padding: 86px 0;
 }
 
 /* Session10
@@ -361,4 +438,17 @@ ul.nav a:hover { color: #000 !important; }
     padding: 20px;
     color: #fff;
     text-align: center;
+}
+
+.sumBut {
+    background-color: #d84315;
+    text-align: center;
+    letter-spacing: .5px;
+    color: #fff;
+    height: 36px;
+    line-height: 36px;
+    outline: 0;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    border: none;
 }

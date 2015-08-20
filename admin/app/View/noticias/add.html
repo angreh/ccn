@@ -6,8 +6,22 @@
 <div class="deep-orange-text text-lighten-1 breadcrumb"><i class="tiny material-icons">home</i> Notícias /
     Adicionar
 </div>
+
 <form onsubmit="Greh.submit(this); return false;" action="noticias-store">
-    <input type="hidden" name="user_id" value="{USER_ID}" />
+    <div class="image-editor">
+        <input type="file" class="cropit-image-input">
+        <button class="waves-effect waves-light deep-orange darken-3 btn pickImageRep">Selecionar foto</button>
+        <br /><br />
+        <div class="cropit-image-preview"></div>
+
+        <input type="range" class="cropit-image-zoom-input"/>
+        <input type="hidden" name="image-data" class="hidden-image-data"/>
+        <!--button class="export">Export</button-->
+    </div>
+
+
+    <input type="hidden" name="user_id" value="{USER_ID}"/>
+
     <div class="input-field">
         <input id="title_news" type="text" name="title" class="validate">
         <label for="title_news" class="deep-orange-text text-darken-3">Título:</label>

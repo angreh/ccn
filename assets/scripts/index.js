@@ -2,12 +2,24 @@
  * Created by Bel on 7/25/2015.
  */
 $(function () {
+    $('.nav a').on('click', function(){
+        //$(".btn-navbar").click(); //bootstrap 2.x
+        $(".navbar-toggle").click() //bootstrap 3.x by Richard
+    });
+
+    $(window).scroll(function(){
+        if($('#session4').visible(true)){
+
+        }
+    });
+
     $('#myCarousel').slippry();
 
-    $.stellar({
+    /*$.stellar({
         horizontalScrolling: false,
         verticalOffset: 40
-    });
+    });*/
+
     $('.subNavBtn').each(function () {
         $(this).click(function () {
             var body = $("html, body");

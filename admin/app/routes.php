@@ -1,7 +1,6 @@
 <?php
 $routes = array(
     /* Dashboard */
-    'index'             => 'Login_Controller@login',
     'dashboard'         => 'Dashboard_Controller@view',
     'dashboard-nt-view' => 'Dashboard_Controller@noTemplateView', //para funcionar no ajax
 
@@ -30,6 +29,9 @@ $routes = array(
     'site-comments'     => 'Leak_Controller@comments',
     'site-news'         => 'Leak_Controller@news',
 
-    /* Logout */
+    /* Login */
+    'index'             => 'Login_Controller@login',
+    'login'             => 'Login_Controller@login',
     'logout'            => 'Login_Controller@logout',
+    'login-fail'        => 'Login_Controller@fail',
 );

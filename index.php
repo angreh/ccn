@@ -34,10 +34,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="/assets/images/layout/logos1.png" title="CCN" width="216"
-                                              height="110"/></a>
+        <a class="navbar-brand" href="#"><img src="/assets/images/layout/logos1.png" title="CCN" /></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
+        <div id="header_phone">matriz: (11) 2803-1123</div>
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#home" class="subNavBtn" target="myCarousel">Home</a></li>
             <li><a href="#sobre" class="subNavBtn" target="session1">sobre</a></li>
@@ -292,49 +292,24 @@
     </div>
 </div>
 
+<div id="session095" class="parallax" data-stellar-background-ratio="0.5">
+    <svg class="oblique-section svg-top" preserveAspectRatio="none" viewBox="0 0 86 86" width="100%" height="86">
+        <polygon points="0,0 0,86 86,0" style="fill:#FAFAFA;"/>
+    </svg>
+
+    <svg class="oblique-section svg-bottom" preserveAspectRatio="none" viewBox="0 0 86 86" width="100%" height="86">
+        <polygon points="0,86 86,0 86,86" style="fill:#FAFAFA;"/>
+    </svg>
+    &nbsp;
+</div>
+
+
 <div id="session10">
     <div class="container">
         <h2>notícias</h2>
 
         <div class="row" id="news_div">
 
-            <!--div class="col-md-3">
-                <div class="nimg">
-                    <img src="/assets/images/layout/news-150x150.png" title="Notícias"/>
-                </div>
-                <h5>serviços</h5>
-                <hr/>
-                <p>A CCN Transportes realiza serviços de Distribuição, Cross Docking, Logistica Reversa, Entregas
-                    Agendadas, Armazenagens, Palatização e Cargas Lotação.</p>
-            </div>
-            <div class="col-md-3">
-                <div class="nimg">
-                    <img src="/assets/images/layout/news-150x150.png" title="Notícias"/>
-                </div>
-                <h5>distribuição fracionada</h5>
-                <hr/>
-                <p>Especializada em Distribuição Fracionada com foco em mercadorias com Alto Valor Agregado.</p>
-            </div>
-            <div class="col-md-3">
-                <div class="nimg">
-                    <img src="/assets/images/layout/news-150x150.png" title="Notícias"/>
-                </div>
-                <h5>identificação de volumes</h5>
-                <hr/>
-                <p>Após a chegada de sua mercadoria em nosso terminal
-                    todos os volumes coletados são etiquetados e identificados através de código de barras
-                    possibilitando
-                    assim uma maior qualidade, velocidade na conferencia das mercadorias.</p>
-            </div>
-            <div class="col-md-3">
-                <div class="nimg">
-                    <img src="/assets/images/layout/news-150x150.png" title="Notícias"/>
-                </div>
-                <h5>tecnologia e informação</h5>
-                <hr/>
-                <p>Após a realização da entrega, ainda no Portal de Informações o cliente também tem disponível seus
-                    comprovantes de entrega digitalizados.</p>
-            </div-->
         </div>
     </div>
     <svg class="oblique-section svg-bottom" preserveAspectRatio="none" viewBox="0 0 86 86" width="100%" height="86">
@@ -407,7 +382,7 @@
                     </p>
 
                     <p>
-                        <input type="submit" value="ENVIAR" class="wpcf7-form-control wpcf7-submit">
+                        <input type="submit" value="ENVIAR" class="wpcf7-form-control wpcf7-submit sumBut">
                         <img
                             class="ajax-loader"
                             src="http://ccn2.dev.cre8.ag/wp-content/plugins/contact-form-7/images/ajax-loader.gif"
@@ -455,6 +430,7 @@
 <script src="/assets/scripts/vscroll.js"></script>
 <script src="/assets/scripts/jquery.stellar.js"></script>
 <script src="/assets/scripts/slippry.min.js"></script>
+<script src="/assets/scripts/jquery.visible.min.js"></script>
 <script src="/assets/scripts/index.js"></script>
 </body>
 </html>
